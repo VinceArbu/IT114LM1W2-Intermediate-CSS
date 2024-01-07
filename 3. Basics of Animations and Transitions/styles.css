@@ -61,7 +61,7 @@ Set more key frames between 0% and 100%. */
 /* Todo 3.2: Try the different timing funcitons such as linear, ease-in, ease-in-out, cubic-bezier, and steps*/
 .todo-2-container .box {
   /* Apply animation here */
-  animation: moves 0.5s steps infinite;
+  animation: moves 2s linear infinite;
 }
 
 @keyframes moves {
@@ -69,9 +69,8 @@ Set more key frames between 0% and 100%. */
     transform: translateX(0);
   }
   50% {
-    transform: translateX(100px);
+    transform: translateX(200px);
   }
-
   100% {
     transform: translateX(0);
   }
@@ -80,4 +79,10 @@ Set more key frames between 0% and 100%. */
 /* bonus: apply the transition on the box shadow with different duration and timing function. This should all be in one line*/
 .todo-3-container button {
   /* Apply transition here */
+  transition: transform 0.3s ease-in-out, box-shadow 0.5s linear;
+}
+
+.todo-3-container button:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
